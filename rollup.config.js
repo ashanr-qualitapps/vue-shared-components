@@ -25,7 +25,8 @@ export default {
       compileTemplate: true // Explicitly convert template to render function
     }),
     babel({
-      exclude: 'node_modules/**'
+      exclude: 'node_modules/**',
+      presets: ['@babel/preset-env']
     }),
     css({ output: 'bundle.css' }),
     terser()
