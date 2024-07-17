@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-  "vue-shared-components": "git+https://github.com/ashanr-qualitapps/vue-shared-components.git"
+    "axios": "^1.7.2",
+    "vue-shared-components": "git+https://github.com/ashanr-qualitapps/vue-shared-components.git"
   },
   "keywords": [],
   "author": "",
