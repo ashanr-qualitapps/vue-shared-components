@@ -19,6 +19,11 @@ jobs:
           node-version: '16'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+            version: 7.11.0 
+
       - name: Install dependencies
         run: pnpm install
 
@@ -28,4 +33,4 @@ jobs:
       - name: Publish package
         run: pnpm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: SHA256:X2KFEJYQRZ7YSkmyW0elPKJjvyIOx6OZLnqdbGDKUTA
