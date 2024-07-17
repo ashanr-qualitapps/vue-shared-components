@@ -19,15 +19,15 @@ jobs:
           node-version: '16'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: npm/action-setup@v2
         with:
           version: 7.11.0
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build package
-        run: pnpm run build
+        run: npm run build
 
       - name: Authenticate to GitHub Packages
         run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > ~/.npmrc
@@ -36,4 +36,4 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
 
       - name: Publish package
-        run: pnpm publish --registry=https://registry.npmjs.org/
+        run: npm publish --registry=https://registry.npmjs.org/
