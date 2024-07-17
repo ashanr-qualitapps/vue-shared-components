@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+  "vue-shared-components": "git+https://github.com/ashanr-qualitapps/vue-shared-components.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
