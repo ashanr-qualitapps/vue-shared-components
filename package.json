@@ -11,7 +11,7 @@
     }
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+     "@ashanr-qualitapps:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "build": "vite build",
