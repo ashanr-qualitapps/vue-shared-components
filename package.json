@@ -18,7 +18,8 @@
     "dev": "vite",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --fix --ext .js,.vue src",
-    "test": "jest"
+    "test": "jest",
+    "publish": "pnpm publish --registry=https://npm.pkg.github.com/"
   },
   "dependencies": {
     "vue": "^3.0.0",

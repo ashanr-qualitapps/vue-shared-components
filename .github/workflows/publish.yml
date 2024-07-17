@@ -22,7 +22,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-            version: 7.11.0 
+          version: 7.11.0
 
       - name: Install dependencies
         run: pnpm install
@@ -31,6 +31,6 @@ jobs:
         run: pnpm run build
 
       - name: Publish package
-        run: pnpm publish
+        run: pnpm run publish
         env:
-          NODE_AUTH_TOKEN:  ${{ env.NODE_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
