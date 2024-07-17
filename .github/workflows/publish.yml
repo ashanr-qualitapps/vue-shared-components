@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
       - name: Install pnpm
-        uses: npm/action-setup@v2
+        uses: npm/action-setup@v3
         with:
           version: 7.11.0
 

@@ -1,0 +1,32 @@
+{
+    "name": "Node.js & pnpm",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {
+        "version": "18"
+      },
+      "ghcr.io/devcontainers/features/pnpm:1": {}
+    },
+    "postCreateCommand": "pnpm install",
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "extensions": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ],
+    "remoteUser": "node",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        }
+      }
+    },
+    "remoteEnv": {
+      "NPM_TOKEN": "${{ secrets.NPM_TOKEN }}",
+      "GH_TOKEN": "${{ secrets.GH_TOKEN }}"
+    },
+    "postCreateCommand": "echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > ~/.npmrc && echo \"//npm.pkg.github.com/:_authToken=${GH_TOKEN}\" >> ~/.npmrc && pnpm install"
+  }
+  
