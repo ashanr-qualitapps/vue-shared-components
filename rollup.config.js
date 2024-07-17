@@ -3,6 +3,7 @@ import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
+import css from 'rollup-plugin-css-only';
 
 export default {
   input: 'src/index.js',
@@ -17,12 +18,16 @@ export default {
     }
   ],
   plugins: [
-    vue(),
+    resolve(),
+    commonjs(),
+    vue({
+      css: true, // Dynamically inject CSS in the bundle
+      compileTemplate: true // Explicitly convert template to render function
+    }),
     babel({
       exclude: 'node_modules/**'
     }),
-    commonjs(),
-    resolve(),
+    css({ output: 'bundle.css' }),
     terser()
   ]
-}
+};
