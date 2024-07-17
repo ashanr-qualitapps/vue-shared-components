@@ -33,4 +33,4 @@ jobs:
       - name: Publish package
         run: pnpm publish
         env:
-          NODE_AUTH_TOKEN: SHA256:X2KFEJYQRZ7YSkmyW0elPKJjvyIOx6OZLnqdbGDKUTA
+          NODE_AUTH_TOKEN:  ${{ env.NODE_AUTH_TOKEN }}
