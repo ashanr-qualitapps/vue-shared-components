@@ -5,3 +5,7 @@ pnpm-lock.yaml
 
 
 .env
+
+
+.npmrc
+.npmignore
