@@ -3,6 +3,7 @@
     <h2>Countries</h2>
     <ul>
       <li v-for="country in countries" :key="country.cca3">
+        <img :src="country.flags[0]" alt="Flag" class="flag" />
         {{ country.name.common }}
       </li>
     </ul>
@@ -38,5 +39,11 @@ export default {
 <style scoped>
 .country-list {
   padding: 20px;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
 }
 </style>
