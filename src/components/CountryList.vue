@@ -3,7 +3,7 @@
     <h2>Countries</h2>
     <ul>
       <li v-for="country in displayedCountries" :key="country.cca3">
-        <img :src="country.flags[0]" alt="Flag" class="flag" />
+        <img :src="country.flags.png" alt="Flag" class="flag" />
         {{ country.name.common }}
       </li>
     </ul>

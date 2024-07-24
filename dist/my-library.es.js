@@ -47,7 +47,7 @@ const _ = (e, t) => {
   beforeDestroy() {
     this.observer && this.observer.disconnect();
   }
-}, v = (e) => (g("data-v-25fd2888"), e = e(), m(), e), y = { class: "country-list" }, C = /* @__PURE__ */ v(() => /* @__PURE__ */ s("h2", null, "Countries", -1)), b = ["src"], I = {
+}, v = (e) => (g("data-v-eaddcaf6"), e = e(), m(), e), y = { class: "country-list" }, C = /* @__PURE__ */ v(() => /* @__PURE__ */ s("h2", null, "Countries", -1)), b = ["src"], I = {
   ref: "loadMoreTrigger",
   class: "load-more-trigger"
 };
@@ -59,7 +59,7 @@ function x(e, t, r, a, o, M) {
         key: i.cca3
       }, [
         s("img", {
-          src: i.flags[0],
+          src: i.flags.png,
           alt: "Flag",
           class: "flag"
         }, null, 8, b),
@@ -69,7 +69,7 @@ function x(e, t, r, a, o, M) {
     s("div", I, null, 512)
   ]);
 }
-const P = /* @__PURE__ */ _(f, [["render", x], ["__scopeId", "data-v-25fd2888"]]), O = {
+const P = /* @__PURE__ */ _(f, [["render", x], ["__scopeId", "data-v-eaddcaf6"]]), O = {
   CountryList: P
 };
 export {
